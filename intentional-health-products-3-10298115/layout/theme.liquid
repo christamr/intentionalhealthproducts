@@ -52,82 +52,44 @@
 
 <body>
   
-  <!-- Begin toolbar -->
-  <div class="toolbar-wrapper">
-    <div class="toolbar clearfix">
-      <div class="span12 clearfix">
-        <ul class="unstyled">
+<!-- Begin toolbar -->
+<section class="toolbar">
+  <div class="width-wrapper">
+    <ul>
+      <li><a href="/cart" class="cart" title="Shopping Cart">Cart: <span id="cart-count">{{ cart.item_count }}</span></a></li>
+      {% if cart.item_count != 0 %}
+      <li id="checkout-link" ><a href="/cart" title="Checkout">Check out</a></li>
+      {% endif %}
+      {% include 'customer_links' %}
+    </ul>
+  </div>
+</section>
+<!-- End toolbar -->
 
-         <!--  <li class="search-field fl">
-            <form class="search" action="/search">
-              <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go" />
-              <input type="text" name="q" class="search_box" placeholder="Search" value="{{ search.terms }}" />
-            </form>
-          </li> -->
-          <li id="cart-target" class="toolbar-cart "><span class="icon-cart"></span><a href="/cart" class="cart" title="Shopping Cart">Cart: <span id="cart-count">{{ cart.item_count }}</span></a></li>
-          {% if cart.item_count != 0 %}
-          <li id="checkout-link" ><a href="/cart" title="Checkout">Check out</a></li>
-          {% endif %}
-          
-          {% include 'customer_links' %}
-        </ul>
-      </div>
+<!-- start nav -->
+<nav class="main">
+  <div class="width-wrapper">
+    {% include 'dropdown' %}
+  </div>
+</nav> <!-- /.main -->
+          <!-- <nav class="mobile clearfix"> -->
+            <!--{% include 'mobile-menu' %} -->
+          <!-- </nav> -->
+        </div> 
+      </section> 
     </div>
   </div>
-  <!-- End toolbar -->
+</div>
+  <!-- End below navigation -->
   
   <!-- Begin wrapper -->
   <div id="transparency" class="wrapper">
-    <div class="row">      
-           
-     <!--Begin below navigation
-      <div class="span12 clearfix">
-        <div class="logo">
-          {% if settings.use_logo %}
-          <h1><a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a></h1>
-          {% if template == 'index' %}
-          <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
-          {% endif %}
-          {% else %}
-          <h1><a href="/">{{ shop.name }}</a></h1>
-          {% endif %}
-        </div> 
-      </div>  -->
-      
-      <section id="nav" class="row p30">
-        <div class="span12">
-          <nav class="main">
-            {% include 'dropdown' %}
-          </nav> <!-- /.main -->
-          <nav class="mobile clearfix">
-            {% include 'mobile-menu' %}
-          </nav> <!-- /.mobile --> 
-        </div> 
-      </section> 
-      <!-- End below navigation -->
-      
+    <div class="row"> 
       <!-- Begin content-->
       <section id="content" class="clearfix">
-          {% if template == "list-collections" %}
-          <div id="collection" class="row">
-            <div class="span12">
-              <h1><span>Product Collections</span></h1>
-            </div> <!-- /.span12 -->
-          </div> <!-- /.row -->
-          
-          <div class="row products masonry">
-            {% for collection in collections %}
-            {% unless collection.all_products_count == 0 or collection.handle == "frontpage" %}
-            {% include 'collection-loop' %}
-            {% endunless %}
-            {% endfor %}
-          </div> <!-- /#collection.row -->
-          {% else %}
-          {{ content_for_layout }}
-          {% endif %}
+        {{ content_for_layout }}
       </section>
       <!-- End content-->
-      
     </div>
   </div>
   <!-- End wrapper -->
@@ -136,22 +98,7 @@
   <div class="footer-wrapper">
     <footer>
       <div class="row">
-
         <div class="span12 full-border"></div>
-        
-        <!-- Begin latest blog post -->
-        {% if settings.footer_blog_post and blogs[settings.footer_blog_post].handle == settings.footer_blog_post and blogs[settings.footer_blog_post].articles.size > 0 %}
-        {% assign article = blogs[settings.footer_blog_post].articles.first %}
-        <div class="span4">
-          <div class="p30">
-            <h4>{{ settings.footer_blog_post_header }}</h4>
-            <p class="p10"><strong>{{ article.title | link_to: article.url }}</strong></p>
-            <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
-          </div>
-        </div>
-        {% endif %}
-        <!-- End latest blog post -->
-        
         {% if settings.footer_linklist != '' and linklists[settings.footer_linklist].links.size > 0 %}
         <!-- Begin footer navigation -->
         <div class="span4 footer-menu">          
@@ -161,14 +108,12 @@
               <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
             {% endfor %}
           </ul>
-          
         </div>
         <!-- End footer navigation -->
         {% endif %}
         
         <!-- Begin newsletter/social -->
         <div class="span4">
-          
           {% if settings.footer_display_newsletter %}
           <div class="p30">
             <h4>Newsletter</h4>
@@ -211,56 +156,5 @@
     </footer>
   </div>
   <!-- End footer -->
-    
-  {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
-
-  {% if settings.enable_product_image_zoom %}
-    {{ 'jquery.zoom.min.js' | asset_url | script_tag }}
-  {% endif %}
-  {{ 'jquery.tweet.js' | asset_url | script_tag }}
-  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
-
-  
-  {% if template contains 'product' %}
-  
-  <script>
-
-  var selectCallback = function(variant, selector) {
-    
-     if (variant && variant.featured_image) {
-      var newImage = variant.featured_image; // New image object.
-      var mainImageDomEl = jQuery('.featured img')[0]; // DOM element of main image we need to swap.
-      Shopify.Image.switchImage(newImage, mainImageDomEl, switchImage); // Define switchImage (the callback) in your theme's JavaScript file.
-    }
-    
-    if (variant && variant.available) {
-      jQuery('#add-to-cart').removeAttr('disabled').removeClass('disabled');
-      if(variant.price < variant.compare_at_price){
-        jQuery('#price-preview').html(Shopify.formatMoney(variant.price, "{{ shop.money_format }}") + " <del>" + Shopify.formatMoney(variant.compare_at_price, "{{ shop.money_format }}") + "</del>");
-      } else {
-        jQuery('#price-preview').html(Shopify.formatMoney(variant.price, "{{ shop.money_format }}"));
-      }
-    } else {
-      jQuery('#add-to-cart').addClass('disabled').attr('disabled', 'disabled');
-      var message = variant ? "Sold Out" : "Unavailable";
-      jQuery('#price-preview').text(message);
-    }
-  };
-  
-  jQuery(document).ready(function($){
-    new Shopify.OptionSelectors("product-select", { product: {{ product | json }}, onVariantSelected: selectCallback, enableHistoryState: true });
-
-    // Add label if only one product option and it isn't 'Title'.
-    {% if product.options.size == 1 and product.options.first != 'Title' %}
-      $('.selector-wrapper:eq(0)').prepend('<label>{{ product.options.first | escape }}</label>');
-    {% endif %}
-  
-
-  });
-       
-  </script>
-  
-  {% endif %}
-  
 </body>
 </html>
