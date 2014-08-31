@@ -3,26 +3,6 @@
   <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}" />
   
   <div class="row clearfix">
-    
-    <!-- Begin breadcrumb -->
-    <div class="span12">
-      <div class="breadcrumb clearfix">
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-          <a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a>
-        </span> 
-        <span class="arrow-space">&#62;</span>
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-          {% if collection %}
-            <a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}<span></a>
-          {% else %}
-            <a href="/collections/all" title="All Products" itemprop="url"><span itemprop="title">Products</span></a>
-          {% endif %}
-        </span>
-        <span class="arrow-space">&#62;</span>
-        <strong>{{ product.title }}</strong>
-      </div>
-    </div>
-    <!-- End breadcrumb -->
 
     <!-- Begin product photos -->
     <div class="span6">
