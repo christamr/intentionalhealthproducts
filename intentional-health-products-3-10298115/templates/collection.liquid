@@ -7,6 +7,7 @@
       
       <!-- Begin sort collection -->
       <div class="clearfix">
+      <div class="width-wrapper">
         <h1 class="collection-title">{{ collection.title }}</h1>
         {% if settings.collection_tags %}        
           {% if collection.all_tags.size > 0 %}
@@ -37,6 +38,7 @@
           </div>        
         {% endif %}
       </div>
+      </div>
       <!-- End sort collection -->
       
       <!-- Begin collection description -->
@@ -59,9 +61,11 @@
   {% endif %}
   
   <div class="row products">
+    <div class="width-wrapper">
     {% for product in collection.products limit: settings.pagination_limit %}
     {% include 'product-loop' with collection.handle %}
     {% endfor %}
+  </div>
   </div>
   
   {% include 'pagination' %}
