@@ -9,6 +9,7 @@
       
       <!-- Begin featured image -->
       <div class="image featured">
+      <div class="width-wrapper"> 
         {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
         {% if settings.enable_product_image_zoom %}
           <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
@@ -18,11 +19,13 @@
         </a>
         {% endif %}
       </div>
+      </div>
       <!-- End product image -->
       
       {% if product.images.size > 1%}
       <!-- Begin thumbnails -->
       <div class="thumbs clearfix" style="margin-left:-15px;">
+      <div class="width-wrapper">
         {% for image in product.images %}
         {% if settings.enable_product_image_zoom %}
         <div class="image span2{% cycle 'last-in-row': '', '', ' last-in-row' %}">
@@ -39,19 +42,22 @@
         {% endif %}
         {% endfor %}
       </div>
+      </div>
       <!-- End thumbnails -->
       <style>
+      <div class="width-wrapper">
       .thumbs .image { margin: 15px 0 }
       .thumbs .image { padding: 0 15px }
       .thumbs .last-in-row { padding-right: 0 }
       </style>
       {% endif %}
     </div>
+    </div>
     <!-- End product photos -->
     
     <!-- Begin description -->
     <div class="span6">
-      
+    <div class="width-wrapper">  
       <h1 class="title" itemprop="name">{{ product.title }}</h1>
       
       <div class="purchase" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -117,6 +123,7 @@
         {% include 'like' %}
       </div>
       <!-- End social buttons -->
+    </div>
     </div>
     <!-- End description -->
 
