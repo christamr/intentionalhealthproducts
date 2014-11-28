@@ -21,21 +21,7 @@
           </div>
           {% endif %}        
         {% endif %}
-        {% if settings.collection_sort and collection.products_count > 1 %}
-          <div class="browse-tags">
-            <label>Sort by:</label>
-          	<select class="sort-by">
-          	  <option value="manual">Featured</option>
-              <option value="price-ascending">Price: Low to High</option>
-              <option value="price-descending">Price: High to Low</option>
-              <option value="title-ascending">A-Z</option>
-              <option value="title-descending">Z-A</option>
-              <option value="created-ascending">Oldest to Newest</option>
-              <option value="created-descending">Newest to Oldest</option>
-              <option value="best-selling">Best Selling</option>
-          	</select>           
-          </div>        
-        {% endif %}
+        
       </div>
       </div>
       <!-- End sort collection -->
@@ -62,7 +48,7 @@
   <div class="row products">
     <div class="width-wrapper">
     {% for product in collection.products limit: settings.pagination_limit %}
-    {% include 'product-loop' with collection.handle %}
+    {% include 'service-loop' with collection.handle %}
     {% endfor %}
   </div>
   </div>
