@@ -1,21 +1,21 @@
 {% capture collection_handle %}{{ product-loop | handleize }}{% endcapture %}
 {% capture url %}{% if collection_handle != "" %}/collections/{{ product-loop }}{{ product.url }}{% else %}{{ product.url }}{% endif %}{% endcapture %}
-<div class="product span4">
+<div class="service span4">
   
   {% if product.price_min < product.compare_at_price_min %}
     <span class="circle sale">Sale</span>
   {% endif %}
   
-  <div class="image">
+  <div class="image photo-column">
     <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
   </div>
   
-  <div class="details">
-    <h4 class="title">{{ product.title }}</h4>
-    <p class='description'>{{ product.description }}</p>
-    <span class="price">
+  <div class="details content-column">
+    <h2 class="title">{{ product.title }}</h2>
+      <span class="price">
       {{ product.price | money }}
     </span>
+    <p class='description'>{{ product.description }}</p>
   </div>
 </div>
 {% cycle 'clear-product-loop': '', '', '<div style="clear:both;"></div>' %}

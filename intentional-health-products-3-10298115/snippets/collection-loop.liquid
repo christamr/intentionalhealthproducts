@@ -4,9 +4,11 @@
   <div class="image">
     <a href="{{ collection.url }}">
       {% if collection.image %}
+      <a href="{{ collection.url }}" class="clearfix">
         <img src="{{ collection.image.src | collection_img_url: 'large' }}" alt="{{ collection.image.alt }}" />
       {% else %}
         <img src="{{ collection.products.first.featured_image | product_img_url: 'large' }}" alt="{{ collection.title | escape  }}" />
+      </a>
       {% endif %}
     </a>
   </div>
@@ -15,7 +17,7 @@
   <!-- Begin product description -->
   <div class="details">
     <a href="{{ collection.url }}" class="clearfix">
-      <h4 class="title">{{ collection.title }}</h4>
+      <h2 class="title">{{ collection.title }}</h2>
       <span class="price">{{ collection.all_products_count }} {{ collection.all_products_count | pluralize: 'Product', 'Products' }}</span>
     </a>
   </div>

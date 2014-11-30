@@ -16,16 +16,16 @@ h1 {
 
 h2 {
   font-family: "droid-serif", serif;
-  font-size: 1.75em;
-  font-style: italic;
-  color: #544f45;
+  font-size: 2em;
+  color: #5E6900;
   font-weight: lighter;
   margin: 0px;
 }
 
 h3 {
   font-family: "droid-serif", serif;
-  font-size: 2em;
+  font-size: 1.75em;
+  font-style: italic;
   color: #544f45;
   font-weight: lighter;
   margin: 0px;
@@ -49,7 +49,7 @@ p {
   width: 70%;
   max-width: 1000px;
   margin-right: 14%;
-  margin-left: 15%;
+  margin-left: 14%;
 }
 
 .btn:link {
@@ -205,7 +205,7 @@ header img {
   text-align: center;
 }
 
-.cta-section h2 {
+.cta-section h3 {
   color: #f1eed7;
   text-align: center;
   padding-top: 75px;
@@ -240,13 +240,13 @@ header img {
   text-decoration: none;
 }
 
-.cta-section .go-shop, .cta-section .services {
+.cta-section .go-shop, .cta-section .services, .cta-section .cta-hover-centered {
   display: inline-block;
   height: 139px;
   line-height: 130px;
 }
 
-.cta-section .go-shop, .cta-section .services, .cta-section .or {
+.cta-section .go-shop, .cta-section .services, .cta-section .cta-hover-centered, .cta-section .or {
   position: relative;
   top: -35px;
 }
@@ -259,6 +259,11 @@ header img {
 
 .services:hover {
   background: url('services-rollover.png') 150px no-repeat;
+  text-shadow: 2px 2px 5px rgb(50,50,10);
+}
+
+.cta-hover-centered:hover {
+  background: url('centered-rollover.png') center no-repeat;
   text-shadow: 2px 2px 5px rgb(50,50,10);
 }
 
@@ -451,6 +456,10 @@ header.header-service {
   padding-bottom: 50px;
 }
 
+#page .content-column {
+  padding-bottom: 100px;
+}
+
 .photo-column {
   width: 27%;
   padding-right: 25px;
@@ -462,10 +471,14 @@ header.header-service {
   width: 100%;
 }
 
+.photo-column.img-decoration {
+  width: 50%;
+}
+
 .content-column {
   width: 70%;
   display: inline-block;
-  padding-bottom: 100px;
+/*  padding-bottom: 100px;*/
 }
  
 .regular-page {
@@ -480,4 +493,62 @@ header.header-service {
 
 .span12 p {
   font-size: 1.5em;
+}
+
+#collection h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.services-page {
+  background: url('services-ginger.png') no-repeat;
+  background-position: right top;
+}
+
+.service .details {
+  text-align: left;
+}
+
+.description {
+  font-family: 'Droid-Sans' sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.price {
+  font-family: 'Droid-Sans' sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #544F45;
+}
+
+.product {
+  display: inline-block;
+  padding: 15px;
+}
+
+.title {
+  font-family: "droid-serif", serif;
+  font-size: 2em;
+  color: #5E6900;
+  font-weight: lighter;
+  margin: 0px;
+}
+
+.details a:link {
+  text-decoration: none;
+}
+
+.details a:visited {
+  text-decoration: none;
+}
+
+.details a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid #EFAC00;
+  padding-bottom: 7px;
+}
+
+#collection .products {
+  text-align: center;
 }

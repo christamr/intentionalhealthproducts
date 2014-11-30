@@ -1,20 +1,18 @@
 <div id="page" class="row">
   
 	<div class="span12 details cinnamon-bg">
-	  	<div class="width-wrapper">
-	  		<div class="regular-page">
-	  			<h1 class="p25">{{ page.title }}</h1>
-			    <div class="photo-column">{{ 'carla.png' | asset_url | img_tag }}</div>
-			    <div class="content-column">{{ page.content }}</div>
-	  		</div>
+	  	<div class="width-wrapper regular-page">
+  			<h1 class="p25">{{ page.title }}</h1>
+		    <div class="photo-column">{{ 'carla.png' | asset_url | img_tag }}</div>
+		    <div class="content-column">{{ page.content }}</div>
 	 	</div>
 	</div>
 	
 	<section class="cta-section">
  		<div class="width-wrapper">
-   			<h2>need a little advice?</h2>
+   			<h3>need a little advice?</h3>
     		{{ 'cta-decoration.png' | asset_url | img_tag }}
-   	 		<p><a class="go-shop" href="#">Read My Latest Musings</a></p>
+   	 		<p><a class="cta-hover-centered" href="#">Read My Latest Musings</a></p>
   		</div>
 	</section>
   
