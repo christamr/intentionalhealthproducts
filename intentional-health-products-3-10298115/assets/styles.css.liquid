@@ -203,6 +203,9 @@ header img {
   background: url('cta-background-v2.jpg');
   height: 315px;
   text-align: center;
+  border-top-width: 1px;
+  border-top-style: ridge;
+  border-top-color: #3A3429;
 }
 
 .cta-section h3 {
@@ -283,6 +286,12 @@ header img {
   display: inline-block;
   margin-top: 15px;
   margin-bottom: 65px;
+}
+
+footer {
+  border-top-width: 1px;
+  border-top-style: ridge;
+  border-top-color: #3A3429;
 }
 
 footer a:link {
@@ -430,6 +439,7 @@ header.header-service {
 .product-column1 {
   width: 30%;
   padding: 0px;
+  padding-top: 50px;
   margin: 0px;
   display: inline-block;
   vertical-align: top;
@@ -439,12 +449,16 @@ header.header-service {
 .product-column2 {
   width: 65%;
   display: inline-block;
-  padding-top: 15px;
 }
 
 .product-column2 p {
   font-family: sans-serif;
   font-size: 1em;
+}
+
+.product-column2 h1 {
+  text-align: left;
+  font-style: inherit;
 }
 
 #content {
@@ -513,6 +527,7 @@ header.header-service {
   font-family: 'Droid-Sans' sans-serif;
   font-size: 1.2em;
   line-height: 1.5em;
+  color: #544F45;
 }
 
 .price {
@@ -530,9 +545,10 @@ header.header-service {
 .title {
   font-family: "droid-serif", serif;
   font-size: 2em;
-  color: #5E6900;
+  color: #3A3429;
   font-weight: lighter;
   margin: 0px;
+  padding-bottom: 10px;
 }
 
 .details a:link {
@@ -553,7 +569,138 @@ header.header-service {
   text-align: center;
 }
 
+.back {
+  padding-bottom: 30px;
+}
+
+.back a:link {
+  font-family: "droid-serif", serif;
+  color: #544f45;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back a:visited {
+  font-family: "droid-serif", serif;
+  color: #544f45;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back a:hover {
+  font-family: "droid-serif", serif;
+  color: #EFAC00;
+  text-align: center;
+}
+
 .products-page {
   background: url('product-background.png') no-repeat;
   background-position: right top;
 }
+
+.purchase-section {
+  padding-top: 50px;
+}
+
+#add-to-cart {
+  font-family: "Droid-Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #6a7614;
+  border: 2px solid #6a7614;
+  border-radius: 4px;
+  padding: 20px 40px 20px 40px;
+  background-color: #FCFDF7;
+}
+
+#add-to-cart:link {
+  font-family: "Droid-Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #6a7614;
+  border: 2px solid #6a7614;
+  border-radius: 4px;
+  padding: 20px 40px 20px 40px;
+}
+
+#add-to-cart:visited {
+  font-family: "Droid-Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #6a7614;
+  border: 2px solid #6a7614;
+  border-radius: 4px;
+  padding: 20px 40px 20px 40px;
+}
+
+#add-to-cart:hover {
+  font-family: "Droid-Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #fdfdf7;
+  background-color: #6a7614;
+  border: 2px solid #6a7614;
+  border-radius: 4px;
+  padding: 20px 40px 20px 40px;
+  cursor: pointer;
+}
+
+#social div {
+  display: inline-block;
+}
+
+.thumbs {
+  padding-top: 30px;
+}
+
+.thumbs div {
+  display: inline-block;
+}
+
+.thumbs img {
+  width: 50px;
+  height: 50px;
+}
+
+.divider-border {
+    background: url('divider-bg2.png') right center repeat-x;
+}
+
+.related-products {
+  margin-top: 100px;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #FCFDF7;
+  padding-bottom: 50px;
+}
+
+.related-products h3 {
+  background: #FCFDF7;
+  display: inline;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* Blog Styling*/
+
+#blog .title {
+  font-family: "droid-serif", serif;
+  font-size: 1em;
+  font-style: italic;
+  color: #544f45;
+  line-height: 1em;
+  margin: 0px;
+  text-align: center;
+  font-weight: lighter;
+  padding-top: 50px;
+}
+
+#blog {
+  background: url('olive-background.png') no-repeat;
+  background-position: right top;
+}
+

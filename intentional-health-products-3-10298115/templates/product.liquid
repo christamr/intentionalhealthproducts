@@ -1,7 +1,7 @@
 <div id="product" class="{{ product.handle }} width-wrapper" itemscope itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
   <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}" />
-  
+
   <div class="row clearfix product-column1">
     <!-- Begin product photos -->
     <div class="span6" >
@@ -22,7 +22,7 @@
       
       {% if product.images.size > 1%}
       <!-- Begin thumbnails -->
-      <div class="thumbs clearfix" style="margin-left:-15px;">
+      <div class="thumbs clearfix">
         <div>
           {% for image in product.images %}
           {% if settings.enable_product_image_zoom %}
@@ -54,8 +54,10 @@
     
     <!-- Begin description -->
     <div class="span6 product-column2">
+     <p class="back"><a href="#">&larr; Back to All Products</a></p>
     <div>  
       <h1 class="title" itemprop="name">{{ product.title }}</h1>
+       <span class="price">{{ product.price }}</span>
       
       <div class="purchase" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
@@ -95,7 +97,16 @@
           </div>
           {% endif %}
 
-          <div class="purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
+        </div>
+        <!-- End product options -->
+
+      </form>
+
+      <div class="description" itemprop="description">
+        {{ product.description }}
+      </div>
+
+      <div class="purchase-section {% if product.variants.size > 1 %} multiple{% endif %}">
             <div class="purchase">
               {% unless product.available %}
               <p>Sold Out</p>
@@ -105,15 +116,6 @@
               {% endunless %}
             </div>
           </div>
-
-        </div>
-        <!-- End product options -->
-
-      </form>
-
-      <div class="description" itemprop="description">
-        {{ product.description }}
-      </div>
 
       <!-- Begin social buttons -->
       <div class="social">
@@ -127,7 +129,7 @@
   </div>
 
   <!-- Begin related product -->
- <div class="width-wrapper">
+ <div class="width-wrapper related-products">
   {% if settings.show_related_products %}
     {% include 'related-products' %}
   {% endif %}
@@ -139,3 +141,11 @@
 {{ image | product_img_url: '1024x1024' | img_tag }}
 {% endfor %}
 </div>
+
+<section class="cta-section">
+  <div class="width-wrapper">
+    <h3>need some help?</h3>
+    {{ 'cta-decoration.png' | asset_url | img_tag }}
+    <p><a class="go-shop" href="#">Contact Carla</a> <span class="or">or</span> <a class="services" href="#">View Articles</a></p>
+  </div>
+</section>
