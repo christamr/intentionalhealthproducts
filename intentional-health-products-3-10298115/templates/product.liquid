@@ -12,9 +12,7 @@
           {% if settings.enable_product_image_zoom %}
             <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
           {% else %}
-          <a href="{{ featured_image | img_url: '1024x1024' }}" class="zoom" id="placeholder">
             <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
-          </a>
           {% endif %}
         </div>
       </div>
@@ -27,15 +25,15 @@
           {% for image in product.images %}
           {% if settings.enable_product_image_zoom %}
           <div class="image span2{% cycle 'last-in-row': '', '', ' last-in-row' %}">
-            <a href="{{ image | product_img_url: '1024x1024' }}" class="cloud-zoom-gallery" data-image-id="{{ image.id }}">
+            <!-- <a href="{{ image | product_img_url: '1024x1024' }}" class="cloud-zoom-gallery" data-image-id="{{ image.id }}"> -->
               <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
-            </a>
+            <!-- </a> -->
           </div>
           {% else %}
           <div class="image span2{% cycle 'last-in-row': '', '', ' last-in-row' %}">
-            <a href="{{ image | product_img_url: '1024x1024' }}" data-original-image="{{ image | product_img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
+            <!-- <a href="{{ image | product_img_url: '1024x1024' }}" data-original-image="{{ image | product_img_url: '1024x1024' }}" data-image-id="{{ image.id }}"> -->
               <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
-            </a>
+            <!-- </a> -->
           </div>
           {% endif %}
           {% endfor %}
@@ -57,7 +55,7 @@
      <p class="back"><a href="#">&larr; Back to All Products</a></p>
     <div>  
       <h1 class="title" itemprop="name">{{ product.title }}</h1>
-       <span class="price">{{ product.price }}</span>
+       <span class="price">{{ product.price | money }}</span>
       
       <div class="purchase" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
@@ -111,8 +109,9 @@
               {% unless product.available %}
               <p>Sold Out</p>
               {% else %}
-              <input type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to cart" />
-              <div id="cart-animation" style="display:none">1</div>
+              <!-- <input type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to cart" /> -->
+              <button type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to cart">Add<span id="cart-animation" style="display:none">ed</span> To Cart </button>
+              
               {% endunless %}
             </div>
           </div>
