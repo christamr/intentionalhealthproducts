@@ -689,7 +689,7 @@ header.header-service {
 
 #blog .title {
   font-family: "droid-serif", serif;
-  font-size: 1em;
+  font-size: 6em;
   font-style: italic;
   color: #544f45;
   line-height: 1em;
@@ -706,14 +706,14 @@ header.header-service {
 }
 
 .sidebar {
-  width: 27%;
+  width: 25%;
   display: inline-block;
-  padding-right: 25px;
+  padding-right: 45px;
   vertical-align: top;
 }
 
 .sidebar p {
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 .sidebar a:link {
@@ -730,13 +730,27 @@ header.header-service {
 
 .sidebar a:hover {
   font-style: none;
-  text-decoration: underline;
-  color: #3A3429;
+  text-decoration: none;
+  color: #727E15;
 }
 
 .articles {
   width: 70%;
   display: inline-block;
+  padding-bottom: 50px;
+}
+
+.articles .divider-border {
+  background: url('divider-bg2.png') right center repeat-x;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.articles .divider-border h3 {
+  background: #FCFDF7;
+  display: inline;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .articles h1 {
@@ -766,13 +780,28 @@ header.header-service {
   font-size: .5em;
   font-style: none;
   color: #544f45;
-  border-bottom: 1px solid #544f45;
+  border-bottom: 1px solid #c8c8c6;
   padding-bottom: 15px;
   margin-bottom: 30px;
 }
 
 .articles p {
-  font-size: 1.5em;
+  font-size: 1.35em;
+  line-height: 1.5em;
+}
+
+.articles em {
+  font-size: 1.35em;
+  line-height: 1.5em;
+  font-style: italic;
+  color: #544f45;
+}
+
+.articles strong {
+  font-size: 1.35em;
+  line-height: 1.5em;
+  font-style: bold;
+  color: #544f45;
 }
 
 .articles a:link {
@@ -788,5 +817,87 @@ header.header-service {
 .articles a:hover {
   color: #EFAC00;
   text-decoration: underline;
+}
+
+.articles li {
+  font-style: "droid-serif", serif;
+  font-size: 1.35em;
+  line-height: 1.5em;
+  color: #544f45;
+}
+
+#article .content-column {
+  padding-top: 50px;
+  display: inline-block;
+}
+
+#article .sidebar {
+  display: inline-block;
+}
+
+.article-body h1 {
+  font-size: 3em;
+  text-align: left;
+  color: #727E15;
+}
+
+.article-body .date {
+  font-size: .5em;
+  font-style: none;
+  color: #544f45;
+  border-bottom: 1px solid #544f45;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.article-body p {
+  font-size: 1.35em;
+  line-height: 1.5em;
+  color: #544f45;
+}
+
+.article-body li {
+  font-style: "droid-serif", serif;
+  font-size: 1.35em;
+  line-height: 1.5em;
+  color: #544f45;
+}
+
+.pagination ul {
+  float: right;
+  vertical-align: center;
+  padding-top: 20px;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-left: 30px;
+  color: #727E15;
+}
+
+.pagination li a:link {
+  color: #727E15;
+  text-decoration: none;
+  font-family: "Droid-Sans", sans-serif;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+.pagination li a:visited {
+  color: #727E15;
+  text-decoration: none;
+  font-family: "Droid-Sans", sans-serif;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+.pagination li a:hover {
+  color: #EFAC00;
+  text-decoration: none;
+  font-family: "Droid-Sans", sans-serif;
+  font-size: .9em;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #EFAC00;
 }
 
