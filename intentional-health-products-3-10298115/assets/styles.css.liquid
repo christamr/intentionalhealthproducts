@@ -48,11 +48,12 @@ p {
 .width-wrapper {
   width: 70%;
   max-width: 1000px;
-  margin-right: 14%;
-  margin-left: 14%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.btn:link {
+.btn:link, input.btn {
+  cursor: pointer;
   font-family: "Droid-Sans", sans-serif;
   text-transform: uppercase;
   font-size: 1.25em;
@@ -515,8 +516,8 @@ header.header-service {
 }
 
 .services-page {
-  background: url('services-ginger.png') no-repeat;
-  background-position: right top;
+  background: url('ginger-background.png') no-repeat;
+  background-position: 75% 30px;
 }
 
 .service .details {
@@ -700,9 +701,12 @@ header.header-service {
 }
 
 #blog .title{
-  background: url('olive-background.png') no-repeat;
-  background-position: right top;
   padding-bottom: 80px;
+}
+
+#blog.olive-bg {
+  background: url('olive-background.png') no-repeat;
+  background-position: 75% 30px;
 }
 
 .sidebar {
@@ -713,7 +717,7 @@ header.header-service {
 }
 
 .sidebar p {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .sidebar a:link {
@@ -827,7 +831,6 @@ header.header-service {
 }
 
 #article .content-column {
-  padding-top: 50px;
   display: inline-block;
 }
 
@@ -951,6 +954,28 @@ tbody a:hover {
   font-style: none;
 }
 
+.inner-left {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
 
+.inner-left label {
+  font-size: 1.2em;
+  font-family: "droid-serif", serif;
+  font-style: italic;
+  color: #544f45;
+}
 
+input.btn {
+  background-color: #FCFDF7;
+}
 
+.expanded-message {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.expanded-message a {
+  margin-top: 80px;
+}

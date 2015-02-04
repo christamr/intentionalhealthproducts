@@ -1,4 +1,4 @@
-<div id="collection">
+<div id="collection" class="services-page">
   {% paginate collection.products by settings.pagination_limit %}
   <!-- Begin collection info -->
   <div class="row">
@@ -6,7 +6,7 @@
       
       <!-- Begin sort collection -->
       <div class="clearfix">
-      <div class="width-wrapper services-page">
+      <div class="width-wrapper">
         <h1 class="collection-title">{{ collection.title }}</h1>
         {% if settings.collection_tags %}        
           {% if collection.all_tags.size > 0 %}
