@@ -56,9 +56,9 @@
 <section class="toolbar">
   <div class="width-wrapper">
     <ul>
-      <li><a href="/cart" class="cart" title="Shopping Cart">Cart: <span id="cart-count">{{ cart.item_count }}</span></a></li>
+      <li><a  class="button-small" href="/cart" class="cart" title="Shopping Cart">Cart: <span id="cart-count">{{ cart.item_count }}</span></a></li>
       {% if cart.item_count != 0 %}
-      <li id="checkout-link" ><a href="/cart" title="Checkout">Check out</a></li>
+      <li id="checkout-link" ><a class="button-small" href="/cart" title="Checkout">Check out</a></li>
       {% endif %}
       {% include 'customer_links' %}
     </ul>
