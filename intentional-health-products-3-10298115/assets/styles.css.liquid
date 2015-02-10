@@ -10,6 +10,13 @@ body {
   font-size: 62.5%; /*1em = 10px*/
 }
 
+.width-wrapper {
+  width: 70%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h1 {
   font-family: "droid-serif", serif;
   font-size: 8.75em;
@@ -61,19 +68,19 @@ ul, ol {
 }
 
 a:link {
-  background: #f1eed7;
+  background-color: #f1eed7;
   text-decoration: none;
   color: #544f45;
 }
 
 a:visited {
-  background: #f1eed7;
+  background-color: #f1eed7;
   text-decoration: none;
   color: #544f45;
 }
 
 a:hover {
-  background: #F3DCAC; 
+  background-color: #F3DCAC; 
 }
 
 .heading-centered {
@@ -105,10 +112,11 @@ p.full-width-copy {
   font-size: 1.75em;
   text-decoration: none;
   border-radius: 45px;
-  padding: 20px 30px 20px 30px;
+  padding: 15px 25px 12px 25px;
   background-color: #FCFDF7;
   border: 2px solid #5E6900;
   color: #5E6900;
+  display: inline-block;
 }
 
 .button-large:visited {
@@ -118,7 +126,7 @@ p.full-width-copy {
   font-size: 1.75em;
   text-decoration: none;
   border-radius: 45px;
-  padding: 20px 30px 20px 30px;
+  padding: 15px 25px 12px 25px;
   background-color: #FCFDF7;
   border: 2px solid #5E6900;
   color: #5E6900;
@@ -131,9 +139,109 @@ p.full-width-copy {
   font-size: 1.75em;
   text-decoration: none;
   border-radius: 45px;
-  padding: 20px 30px 20px 30px;
+  padding: 15px 25px 12px 25px;
   background-color: #5E6900;
   color: #FCFDF7;
+}
+
+/*--- CTA SECTION STYLES ---*/
+ 
+.cta-section {
+  background: url('cta-background-v2.jpg');
+  height: 335px;
+  text-align: center;
+  border-top-width: 1px;
+  border-top-style: ridge;
+  border-top-color: #3A3429;
+}
+
+.cta-section h2.section-heading {
+  color: #f1eed7;
+  text-align: center;
+  padding-top: 75px;
+  font-weight: lighter;
+}
+
+.cta-section p {
+  color: #f1eed7;
+  background-color: none;
+}
+
+.cta-section span.or {
+  font-style: italic;
+  padding: 0 25px 0 25px;
+}
+
+.cta-section img {
+  text-align: center;
+  padding-bottom: 30px;
+  width: 35%;
+  max-width: 350px;
+}
+
+.cta-section a:link {
+  font-size: 1.75em;
+  color: #f1eed7;
+  text-decoration: none;
+  background-color: none;
+}
+
+.cta-section a:visited {
+  font-size: 1.75em;
+  color: #f1eed7;
+  text-decoration: none;
+  background-color: none;
+}
+
+.cta-section .go-shop, .cta-section .services, .cta-section .cta-hover-centered {
+  display: inline-block;
+  height: 139px;
+  line-height: 130px;
+  background-color: none;
+}
+
+.cta-section .go-shop, .cta-section .services, .cta-section .cta-hover-centered, .cta-section .or {
+  position: relative;
+  top: -35px;
+}
+
+.go-shop:hover {
+  background: url('shopping-rollover.png') 46px no-repeat;
+  text-shadow: 2px 2px 5px rgb(50,50,10);
+  cursor: pointer;
+  background-color: none;
+}
+
+.services:hover {
+  background: url('services-rollover.png') 150px no-repeat;
+  text-shadow: 2px 2px 5px rgb(50,50,10);
+  background-color: none;
+}
+
+.cta-hover-centered:hover {
+  background: url('centered-rollover.png') center no-repeat;
+  text-shadow: 2px 2px 5px rgb(50,50,10);
+  background-color: none;
+}
+
+
+/*--- TOOLBAR AND NAVIGATION ---*/
+
+section.toolbar {
+  background-color: #3a3429;
+  margin: 0px;
+  height: 50px;
+  color: #fdfdf7;
+}
+
+.toolbar ul {
+  float: right;
+  margin: 10px 0 0 0;
+}
+
+.toolbar li {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .button-small:link {
@@ -173,32 +281,6 @@ p.full-width-copy {
   background-color: #f1eed7;
   border: 1px solid #f1eed7;
   color: #3A3429;
-}
-
-.width-wrapper {
-  width: 70%;
-  max-width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/*--- TOOLBAR AND NAVIGATION ---*/
-
-section.toolbar {
-  background-color: #3a3429;
-  margin: 0px;
-  height: 50px;
-  color: #fdfdf7;
-}
-
-.toolbar ul {
-  float: right;
-  margin: 10px 0 0 0;
-}
-
-.toolbar li {
-  display: inline-block;
-  margin-left: 10px;
 }
 
 nav.main {
@@ -251,12 +333,79 @@ nav.main .logo {
   background: none;
 }
 
+/*--- FOOTER STYLES ---*/
+
+footer {
+  border-top-width: 1px;
+  border-top-style: ridge;
+  border-top-color: #3A3429;
+}
+
+footer a:link {
+  color: #f1eed7;
+  text-decoration: underline;
+  background-color: none;
+}
+
+footer a:visited {
+  color: #f1eed7;
+  text-decoration: underline;
+  background-color: none;
+}
+
+footer a:hover {
+  color: #6c7814;
+  text-decoration: underline;
+  background-color: none;
+}
+
+footer .ihp-footer {
+  background-color: #544f45;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+footer p {
+  font-family: "Droid-Sans", sans-serif;
+  font-weight: 400;
+  color: #f1eed7;
+  background-color: none;
+  font-size: 1.5em;
+}
+
+footer .column1 {
+  width: 50%;
+  display: inline-block;
+}
+
+footer .column2 {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+}
+
+footer .km-signoff {
+  background-color: #3a3429;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+footer .km-signoff p {
+  font-family: "Droid-Sans", sans-serif;
+  font-weight: lighter;
+  font-weight: 400;
+  color: #f1eed7;
+  text-align: center;
+  background-color: none;
+}
+
 /*--- HOME PAGE HERO ---*/
 
 header.hero-home {
   background: url('home-background.png');
   background-repeat: no-repeat;
   height: 475px;
+  background-color: #FCFDF7;
 }
 
 .hero-home-copy {
@@ -275,15 +424,24 @@ header img {
   margin-bottom: 25px;
 }
 
-/*--- HOME PAGE CTA SECTION --- */
+/*--- HOME PAGE INTRODUCTION --- */
 
-.cta-section {
-  background: url('cta-background-v2.jpg');
-  height: 315px;
+.intro-home {
   text-align: center;
-  border-top-width: 1px;
-  border-top-style: ridge;
-  border-top-color: #3A3429;
+  padding-top: 75px;
+  font-weight: lighter;
+  background-color: #FCFDF7;
+  padding-bottom: 80px;
 }
+
+.intro-home img {
+  padding-bottom: 40px;
+  width: 50%;
+  max-width: 480px;
+}
+
+/*--- REGULAR PAGE STYLES ---*/
+
+
 
 
