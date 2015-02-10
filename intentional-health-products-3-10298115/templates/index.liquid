@@ -21,7 +21,9 @@
     <div class="width-wrapper">
       <h2 class="section-heading">a little about myself...</h2>
       {{ 'home-intro-decoration.png' | asset_url | img_tag }}
-      {{ pages['home-page-introduction'].content }}
+      <div class="full-width-copy">
+        {{ pages['home-page-introduction'].content }}
+      </div>
       <a class="button-large" href="#">Learn More</a>
     </div>
   </section>

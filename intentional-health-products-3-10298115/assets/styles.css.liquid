@@ -85,6 +85,10 @@ a:hover {
 
 .heading-centered {
   text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 h2.section-heading {
@@ -97,12 +101,16 @@ h2.section-heading {
   text-align: center;
 }
 
-p.full-width-copy {
+.full-width-copy {
+  font-size: 1.35em;
   font-family: "droid-serif", serif;
-  font-size: 2.5em;
   color: #544f45;
   line-height: 1.5em;
   text-align: center;
+}
+
+p.full-width-copy {
+  font-size: 2.5em;
 }
 
 .button-large:link {
@@ -205,23 +213,67 @@ p.full-width-copy {
   top: -35px;
 }
 
-.go-shop:hover {
+a:hover.go-shop {
   background: url('shopping-rollover.png') 46px no-repeat;
   text-shadow: 2px 2px 5px rgb(50,50,10);
   cursor: pointer;
-  background-color: none;
 }
 
-.services:hover {
-  background: url('services-rollover.png') 150px no-repeat;
+a:hover.services {
+  background: url('services-rollover.png') 40px no-repeat;
   text-shadow: 2px 2px 5px rgb(50,50,10);
-  background-color: none;
+}
+
+a.go-shop, a.services {
+  background-color: transparent;
 }
 
 .cta-hover-centered:hover {
   background: url('centered-rollover.png') center no-repeat;
   text-shadow: 2px 2px 5px rgb(50,50,10);
   background-color: none;
+}
+
+.cta-service {
+  background: url('cta-background-v2.jpg');
+  height: 315px;
+  text-align: center;
+}
+
+.cta-service h2 {
+  color: #f1eed7;
+  text-align: center;
+  padding-top: 75px;
+  font-weight: lighter;
+}
+
+.cta-service p {
+  color: #f1eed7;
+}
+
+.cta-service img {
+  text-align: center;
+  padding-bottom: 10px;
+  width: 35%;
+  max-width: 350px;
+}
+
+.cta-service a:link {
+  font-size: 1.75em;
+  color: #f1eed7;
+  text-decoration: none;
+}
+
+.cta-service a:visited {
+  font-size: 1.75em;
+  color: #f1eed7;
+  text-decoration: none;
+}
+
+.cta-service a:hover {
+/*  background: url('services-rollover.png') 350px no-repeat;*/
+  text-shadow: 2px 2px 5px rgb(50,50,10);
+  cursor: pointer;
 }
 
 
@@ -442,6 +494,37 @@ header img {
 
 /*--- REGULAR PAGE STYLES ---*/
 
+#page {
+  background-color: #FCFDF7;
+}
+
+.page-heading {
+  background: url('about-background-mint.png') no-repeat;
+  background-position: right top;
+}
+
+.cinnamon-bg {
+  background: url('about-background-cinnamon.png') no-repeat;
+  background-position: bottom left;
+}
+
+.photo-column {
+  width: 27%;
+  padding-right: 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.photo-column img {
+  width: 100%;
+}
+
+.content-column {
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 80px;
+}
 
 
 
