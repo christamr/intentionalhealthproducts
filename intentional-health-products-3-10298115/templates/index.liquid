@@ -1,27 +1,62 @@
-<header class="hero-home">
-  <div class="width-wrapper">
-    <h1 class="hero-home-copy"><span class="hero-copy-color">Helping</span> you</br>
-      help yourself,</br>
-      <span class="hero-copy-color">naturally</span>.
-    </h1>
-    {{ 'home-garlic.png' | asset_url | img_tag }}
-  </div>
-</header>
+<div id="page-index">
+  <header class="hero-home">
+    <div class="width-wrapper">
+      <h1 class="hero-home-copy"><span class="hero-copy-color">Helping</span> you</br>
+        help yourself,</br>
+        <span class="hero-copy-color">naturally</span>.
+      </h1>
+      {{ 'home-garlic.png' | asset_url | img_tag }}
+    </div>
+  </header>
 
-<section class="cta-section">
-  <div class="width-wrapper">
-    <h3>would you like to...</h3>
-    {{ 'cta-decoration.png' | asset_url | img_tag }}
-    <p><a class="go-shop" href="#">Go Shopping</a> <span class="or">or</span> <a class="services" href="#">View Services</a></p>
-  </div>
-</section>
+  <section class="cta-section">
+    <div class="width-wrapper">
+      <h2 class="section-heading">would you like to...</h2>
+      {{ 'cta-decoration.png' | asset_url | img_tag }}
+      <p><a class="go-shop" href="#">Go Shopping</a> <span class="or">or</span> <a class="services" href="#">View Services</a></p>
+    </div>
+  </section>
 
-<section class="intro-home">
-  <div class="width-wrapper">
-    <h3>a little about myself...</h3>
-    {{ 'home-intro-decoration.png' | asset_url | img_tag }}
-    {{ pages['home-page-introduction'].content }}
-    <a class="btn" href="#">Learn More</a>
-  </div>
-</section>
+  <section class="intro-home">
+    <div class="width-wrapper">
+      <h2 class="section-heading">a little about myself...</h2>
+      {{ 'home-intro-decoration.png' | asset_url | img_tag }}
+      {{ pages['home-page-introduction'].content }}
+      <a class="button-large" href="#">Learn More</a>
+    </div>
+  </section>
+</div>
 
+<!-- EXAMPLE STYLES -->
+
+<div class="width-wrapper" style="clear:both;">
+ <h1>This is a Heading One</h1>
+ <h1 class="heading-centered">This is a Heading One</h1>
+ <h2>This is a Heading Two</h2>
+ <h3>This is a Heading Three</h3>
+ <h4>This is a Heading Four</h4>
+ <p class="full-width-copy">This is a full-width block of copy, and can be found on the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum massa ligula, ac laoreet lacus efficitur vitae. <a href="#">Donec efficitur pellentesque ante</a>, sed tempor ante tincidunt at. Quisque dignissim sollicitudin consequat. Suspendisse vehicula, arcu eu lobortis efficitur, lacus augue ornare eros, non efficitur risus neque blandit ligula. Maecenas scelerisque purus ut ligula mattis aliquam. Nulla at bibendum urna, sed faucibus diam. Fusce mollis aliquet dignissim. Nulla bibendum, risus ut bibendum ultrices, elit lorem convallis eros, vitae tincidunt nisi mauris sed elit. Ut vitae libero consequat, faucibus ante sit amet, placerat velit. Morbi non odio pharetra, hendrerit felis et, luctus tellus. Nulla eget augue sapien. Etiam sodales lorem turpis, a aliquam leo mollis in. Morbi egestas ut neque id malesuada. Integer auctor ut nulla eu congue.</p>
+ <h2 class="section-heading">This is a Section Heading...</h2>
+ <p>This is a paragraph of copy, found on regular content pages. It looks like this... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum massa ligula, ac laoreet lacus efficitur vitae. <a href="#">Donec efficitur pellentesque ante</a>, sed tempor ante tincidunt at. Quisque dignissim sollicitudin consequat. Suspendisse vehicula, arcu eu lobortis efficitur, lacus augue ornare eros, non efficitur risus neque blandit ligula. Maecenas scelerisque purus ut ligula mattis aliquam. Nulla at bibendum urna, sed faucibus diam. Fusce mollis aliquet dignissim. Nulla bibendum, risus ut bibendum ultrices, elit lorem convallis eros, vitae tincidunt nisi mauris sed elit. Ut vitae libero consequat, faucibus ante sit amet, placerat velit. Morbi non odio pharetra, hendrerit felis et, luctus tellus. Nulla eget augue sapien. Etiam sodales lorem turpis, a aliquam leo mollis in. Morbi egestas ut neque id malesuada. Integer auctor ut nulla eu congue.</p>
+ <p>Quisque maximus nisi nulla, ut condimentum nibh consequat vitae. Curabitur enim risus, viverra vel molestie eget, volutpat ut justo. Integer convallis arcu at nibh laoreet volutpat. <strong>Quisque at lobortis justo, quis semper nisi. Donec non convallis arcu.</strong> Suspendisse diam tellus, pulvinar et ultrices in, sodales non arcu. Praesent et leo lorem. Donec placerat feugiat aliquet.</p>
+ <ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+  <li>In suscipit tortor non libero mollis ultricies.</li>
+  <li>Curabitur vel nisi volutpat, vestibulum quam nec, pulvinar sem.</li>
+  <li>Mauris faucibus nulla interdum massa vulputate tincidunt.</li>
+  <li>Sed rhoncus lorem nec sapien tristique, et facilisis orci faucibus.</li>
+  <li>Proin lobortis erat sit amet leo feugiat facilisis</li>
+ </ul>
+ <p>Sed pulvinar turpis a eros accumsan fringilla. Pellentesque odio diam, congue a tempus et, eleifend eget risus. Fusce nec ex augue. Fusce vel elit id felis mattis porta semper in metus. Nullam vitae elementum nunc. Vivamus et eros quis purus sodales posuere et ut lacus. Morbi porttitor velit id lorem scelerisque, ac lobortis lacus mollis. <em>Nunc maximus urna at massa congue bibendum. Proin sed vehicula sapien.</em> Vivamus convallis vitae eros et gravida. Nulla pretium tristique lorem, nec rhoncus purus. Duis pharetra sapien sed vulputate gravida. Nunc tincidunt pellentesque velit et volutpat. Suspendisse id libero commodo, iaculis nisl feugiat, egestas leo. Aliquam porttitor tristique nisi vitae auctor. Nullam rhoncus auctor ex, nec malesuada magna lacinia eget.</p>
+ <a class="button-large" href="#">This is a Large Button</a>
+<ol>
+  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+  <li>In suscipit tortor non libero mollis ultricies.</li>
+  <li>Curabitur vel nisi volutpat, vestibulum quam nec, pulvinar sem.</li>
+  <li>Mauris faucibus nulla interdum massa vulputate tincidunt.</li>
+  <li>Sed rhoncus lorem nec sapien tristique, et facilisis orci faucibus.</li>
+  <li>Proin lobortis erat sit amet leo feugiat facilisis</li>
+ </ol>
+<a class="button-small" href="#">This is a Small Button</a>
+
+</div>
